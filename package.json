@@ -1,0 +1,24 @@
+{
+  "name": "KickVote",
+  "version": "1.0",
+  "description": "SMS Voting WebApp to be used at Kainos KickOff",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lizzy Atkinson & Justin Graham",
+  "devDependencies": {
+    "dotenv": "^1.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "socket.io": "^1.3.6",
+    "twilio": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  }
+}
