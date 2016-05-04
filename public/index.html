@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KickOff Vote</title>
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <div class="logo"></div>
+        <div class="call-to-action">
+            text Yes or No to <span id="number" style="color:black;">07403940555</span>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="title wobble" style="color:black;">Should KickOff Show Demos?</h1>
+        <div class="columns">
+            <div class="column column-yes">
+                <span class="answer">yes</span>
+                <span class="result">
+                    <span class="percentage"></span>
+                </span>
+            </div>
+            <div class="column column-percentages">
+                <div class="no">
+                    <div class="img"></div>
+                </div>
+                <div class="yes">
+                    <div class="img"></div>
+                </div>
+            </div>
+            <div class="column column-no">
+                <span class="answer">no</span>
+                <span class="result">
+                    <span class="percentage"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+        <!--<div class="map-container">
+            <div class="map">
+                <div class="no"></div>
+                <div class="yes"></div>
+            </div>
+            <div class="percentages">
+                <div class="no">50%</div>
+                <div class="yes">50%</div>
+            </div>
+        </div>
+        <p>
+            Send the following number : <span id="number">undefined</span>
+        </p>
+        <p>
+            <img src="http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=sms:" alt="" id="qr">
+        </p>
+        <p id="votes">
+            
+        </p>
+        <p>
+            Voters numbers : 
+            <ul id="numbers">
+                
+            </ul>
+        </p>-->
+
+    </div>
+    <script src="javascripts/app.js"></script>
+</body>
+</html>

@@ -1,1 +1,1 @@
-Kick-Vote-SMS
+KickVote - The SMS Voting System for KickOff by Kainos.
