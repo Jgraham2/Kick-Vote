@@ -170,10 +170,10 @@ function vote(number, answer){
 function getPercentages(){
     var p1 = (votes.demo1 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
     var p2 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
-    var p3 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
-    var p4 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
-    var p5 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
-    var p6 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
+    var p3 = (votes.demo3 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
+    var p4 = (votes.demo4 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
+    var p5 = (votes.demo5 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
+    var p6 = (votes.demo6 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
     if (isNaN(p1)){
         p1 = 16.67;
     }
