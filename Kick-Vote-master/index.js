@@ -30,26 +30,28 @@ app.post('/sms', function(req, res){
     var answer = message.Body.toLowerCase();
     var voter = message.From;
 
-    if(answer == 'Demo 1' || answer == 'Demo 2' || answer == 'Demo 3' || answer == 'Demo 4' || answer == 'Demo 5' || answer == 'Demo 6'){
+    if(answer == 'demo1' || answer == 'demo2' || answer == 'demo3' || answer == 'demo4' || answer == 'demo5' || answer == 'demo6'){
         if(numberVoted(voter)) {
             sms.send(voter, 'Sorry, you have already voted')
         }
         else{
-            if(answer == 'Demo 1'){
+            if(answer == 'demo1'){
                 vote(voter, 'demo1');
-            }else if (answer == 'Demo 2'){
+                
+            } 
+            if (answer == 'demo2'){
                 vote(voter, 'demo2');
             }
-            else if (answer == 'Demo 3'){
+            if (answer == 'demo3'){
                 vote(voter, 'demo3');
             }
-            else if (answer == 'Demo 4'){
+            if (answer == 'demo4'){
                 vote(voter, 'demo4');
             }
-            else if (answer == 'Demo 5'){
+            if (answer == 'demo5'){
                 vote(voter, 'demo5');
             }
-            else if (answer == 'Demo 6'){
+            else if (answer == 'demo6'){
                 vote(voter, 'demo6');
             }
         }
@@ -117,9 +119,6 @@ io.on('connection', function (socket) {
 });
 
 
-
-
-
 function numberVoted(number){
     return (numbers.indexOf(number) > -1);
 }
@@ -176,22 +175,22 @@ function getPercentages(){
     var p5 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
     var p6 = (votes.demo2 / (votes.demo1 + votes.demo2 + votes.demo3 + votes.demo4 + votes.demo5 + votes.demo6) * 100).toFixed(0);
     if (isNaN(p1)){
-        p1 = 50;
+        p1 = 16.67;
     }
     if (isNaN(p2)){
-        p2 = 50;
+        p2 = 16.67;
     }
     if (isNaN(p3)){
-        p3 = 50;
+        p3 = 16.67;
     }
     if (isNaN(p4)){
-        p4 = 50;
+        p4 = 16.67;
     }
     if (isNaN(p5)){
-        p5 = 50;
+        p5 = 16.67;
     }
     if (isNaN(p6)){
-        p6 = 50;
+        p6 = 16.67;
     }
     return {
         demo1: p1,

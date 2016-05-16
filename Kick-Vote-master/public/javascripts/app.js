@@ -4,7 +4,7 @@ window.votes = {};
 socket.on('votes', function(votes){
     console.log(votes);
     window.votes = votes;
-    $('#votes').html("Demo 1 " + votes.demo1 + " vs " + votes.demo2 + " Demo 2 " + votes.demo3 + " Demo 3 " + votes.demo4 + " Demo 4 " + votes.demo5 + " Demo 5 " + votes.demo6 + " Demo6");
+    $('#votes').html("Demo 1 " + votes.demo1 + " vs " + votes.demo2 + " Demo 2 " + " vs " + votes.demo3 + " Demo 3 " + " vs " + votes.demo4 + " Demo 4 " + " vs " + votes.demo5 + " Demo 5 " + " vs " + votes.demo6 + " Demo6");
 });
 
 socket.on('percentages', function(percentages){
