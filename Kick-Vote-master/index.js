@@ -60,7 +60,7 @@ app.post('/sms', function(req, res){
         sms.send(voter, getScore());
     }
     else{
-        sms.send(voter, 'Sorry, I did not understand. Please respond with either demo1, demo2, demo3, demo4, demo5, demo6 or SCORE"');
+        sms.send(voter, 'Sorry, I did not understand. Please respond with either "demo1, demo2, demo3, demo4, demo5, demo6"');
     }
 
     var twiml = new twilio.TwimlResponse();
@@ -135,22 +135,22 @@ function vote(number, answer){
 
     if(number){
         if(answer == 'demo1'){
-            sms.send(number, 'You Voted Demo 1. ' + getScore());
+            sms.send(number, 'You Voted Demo 1. ');
         }
         else if(answer == 'demo2'){
-            sms.send(number, 'You Voted Demo 2. ' + getScore());
+            sms.send(number, 'You Voted Demo 2. ');
         }
         else if(answer == 'demo3'){
-            sms.send(number, 'You Voted Demo 3. ' + getScore());
+            sms.send(number, 'You Voted Demo 3. ');
         }
         else if(answer == 'demo4'){
-            sms.send(number, 'You Voted Demo 4. ' + getScore());
+            sms.send(number, 'You Voted Demo 4. ');
         }
         else if(answer == 'demo5'){
-            sms.send(number, 'You Voted Demo 5. ' + getScore());
+            sms.send(number, 'You Voted Demo 5. ');
         }
         else if(answer == 'demo6'){
-            sms.send(number, 'You Voted Demo 6. ' + getScore());
+            sms.send(number, 'You Voted Demo 6. ');
         }
         else{
             return 1;
@@ -200,9 +200,4 @@ function getPercentages(){
         demo5: p5,
         demo6: p6
     }
-}
-
-function getScore(){
-    var percentages = getPercentages();
-    return 'Score: Demo 1 ' + percentages.demo1 + '% vs. Demo 2 ' + percentages.demo2 + '% vs. Demo 3' + percentages.demo3 + '% vs. Demo 4' + percentages.demo4 + '% vs. Demo 5' + percentages.demo5 + '% vs. Demo 6' + percentages.demo6 + '%';
 }
